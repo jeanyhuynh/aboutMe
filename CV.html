@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HuynhThuTrang</title>
+</head>
+<body>
+
+<h1>This is product list page</h1>
+<div id="prod_list"></div>
+</body>
+</html>
+
+<script>
+  const productList = [
+    {
+      key: 'a01',
+      name: 'Apple',
+      desc: 'This is description product Apple',
+      
+    },
+    {key: 'a02',
+    name: 'Flower',
+    desc: 'This is description product Flower',
+    },
+    {key: 'a03',
+    name: 'Pen',
+    desc: 'This is description product Pen',
+    }
+
+]
+
+var str = '<ul>'
+productList.map(item=>{
+    str += `<li> <a href="file:///Users/tranghuynh/Desktop/web/product.html?id=${item.key}" target="_blank">`+ item.name + '</a></li>';
+})
+
+document.getElementById("prod_list").innerHTML = str;
+
+
+
+</script>
